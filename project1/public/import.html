@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        老版本使用的
+        <script src="./export.js"></script>
+        可以不同源
+        不支持export
+        新版本用module只支持同源
+    -->
+    <script type="module">
+        import {a,b} from './export.js'
+        console.log(a)
+        b()
+        import * as m from './export.js'
+        console.log(m)
+        // default导出只是一个属性
+        console.log(m.default)
+    </script>
+</body>
+</html>

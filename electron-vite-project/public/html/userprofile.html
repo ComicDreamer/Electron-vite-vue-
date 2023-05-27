@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="userprofile"></div>
+    <div id="sidebar"></div>
+
+    <!--子元素使用float后，父元素自适应子元素的高度-->
+    <div style="clear:both;"></div> 
+
+    <script type="module" src="../../src/views/userprofile/userprofile.ts"></script>
+    <style>
+        body{
+            -webkit-app-region: drag;
+        }
+        #sidebar{
+            width: 10%;
+            -webkit-app-region: no-drag;   
+            float: right;        
+        
+        }
+        #userprofile{
+            width: 90%;
+            /* pointer-events: none; */
+            float: left; 
+        }
+    </style>
+</body>
+</html>
